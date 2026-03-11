@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | Folger Systems Integration</title>
+<meta name="description" content="Embedded systems consulting services: firmware development, PCB design, systems integration, HMI design, and technical consulting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=JetBrains+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo"><div class="nav-logo-mark"><svg viewBox="0 0 36 36" fill="none"><rect x="1.5" y="1.5" width="33" height="33" rx="4" stroke="#fff" stroke-width="1.5" fill="none"/><line x1="7" y1="9" x2="7" y2="27" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="7" y1="9" x2="13.5" y2="9" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="7" y1="17.5" x2="12" y2="17.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="16" y1="9" x2="23" y2="9" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="16" y1="9" x2="16" y2="17.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="16" y1="17.5" x2="23" y2="17.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="23" y1="17.5" x2="23" y2="27" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="16" y1="27" x2="23" y2="27" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="28" y1="9" x2="28" y2="27" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div><div class="nav-logo-text">Folger Systems <span>Integration</span></div></a>
+  <ul class="nav-links">
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="expertise.html">Expertise</a></li>
+    <li><a href="industries.html">Industries</a></li>
+    <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+  </ul>
+  <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">&#9776;</button>
+</nav>
+
+<section class="page-hero">
+  <div class="hero-grid-bg"></div>
+  <div class="section-label">// Services</div>
+  <h1>What we <em>deliver.</em></h1>
+  <p class="subtitle">End-to-end embedded systems services from initial concept through production deployment. Every engagement is tailored to your specific platform, timeline, and regulatory requirements.</p>
+</section>
+
+<section>
+  <div class="container">
+    <div class="detail-card reveal">
+      <h3>&#x2B21; Firmware Development</h3>
+      <span class="tag">C / C++</span><span class="tag">STM32</span><span class="tag">ESP32</span><span class="tag">FreeRTOS</span><span class="tag">Bare Metal</span>
+      <p>We write production-grade firmware for microcontroller platforms ranging from simple 8-bit controllers to complex ARM Cortex-M7 systems. Our code is structured for maintainability, testability, and long-term support.</p>
+      <ul>
+        <li>Bare-metal and RTOS-based architectures (FreeRTOS, Zephyr)</li>
+        <li>Peripheral drivers: ADC, DAC, SPI, I&sup2;C, UART, CAN, USB</li>
+        <li>Bootloader design and over-the-air (OTA) update systems</li>
+        <li>Power management and low-power sleep mode optimization</li>
+        <li>Automated unit testing and hardware-in-the-loop (HIL) test frameworks</li>
+      </ul>
+    </div>
+
+    <div class="detail-card reveal">
+      <h3>&#x25C8; Systems Integration</h3>
+      <span class="tag">BLE</span><span class="tag">CAN Bus</span><span class="tag">SPI</span><span class="tag">I&sup2;C</span><span class="tag">Modbus</span><span class="tag">RS-485</span>
+      <p>Connecting sensors, actuators, displays, and communication interfaces into a cohesive system. We handle the full signal chain from transducer to cloud.</p>
+      <ul>
+        <li>Multi-sensor data fusion and real-time signal processing</li>
+        <li>Wireless protocol stacks: BLE, WiFi, Zigbee, LoRa</li>
+        <li>Industrial bus integration: CAN, Modbus RTU/TCP, RS-485</li>
+        <li>Gateway and bridge design between protocols</li>
+        <li>System-level debugging with logic analyzers and protocol decoders</li>
+      </ul>
+    </div>
+
+    <div class="detail-card reveal">
+      <h3>&#x2B22; PCB Design</h3>
+      <span class="tag">KiCad</span><span class="tag">Altium</span><span class="tag">DFM</span><span class="tag">Signal Integrity</span>
+      <p>From schematic capture through board layout, we design PCBs that work the first time. Every design considers manufacturability, testability, and EMC compliance from the start.</p>
+      <ul>
+        <li>Schematic capture and component selection</li>
+        <li>Multi-layer PCB layout with controlled impedance</li>
+        <li>Power supply design: switching regulators, LDOs, battery management</li>
+        <li>Design for Manufacturing (DFM) and Design for Test (DFT)</li>
+        <li>BOM optimization and vendor management</li>
+      </ul>
+    </div>
+
+    <div class="detail-card reveal">
+      <h3>&#x25C9; HMI &amp; Display Systems</h3>
+      <span class="tag">.NET MAUI</span><span class="tag">WPF</span><span class="tag">Nextion</span><span class="tag">Android</span><span class="tag">WearOS</span>
+      <p>The interface between your embedded hardware and the humans who use it. We build touchscreen UIs, desktop dashboards, and mobile companion apps that present complex sensor data clearly.</p>
+      <ul>
+        <li>Nextion HMI panel design and firmware integration</li>
+        <li>.NET MAUI cross-platform mobile apps (Android/iOS)</li>
+        <li>WPF desktop dashboards for monitoring and control</li>
+        <li>Real-time data visualization with ring gauges, charts, and alerts</li>
+        <li>BLE and USB connectivity between app and hardware</li>
+      </ul>
+    </div>
+
+    <div class="detail-card reveal">
+      <h3>&#x25B3; Technical Consulting</h3>
+      <span class="tag">Architecture Review</span><span class="tag">Technology Selection</span><span class="tag">Risk Assessment</span>
+      <p>Leverage 24 years of embedded systems experience before you commit to a design direction. We help you make informed decisions early, when changes are cheap.</p>
+      <ul>
+        <li>System architecture review and optimization</li>
+        <li>Microcontroller and component selection guidance</li>
+        <li>Build-vs-buy analysis for embedded platforms</li>
+        <li>Design-for-manufacturing and regulatory readiness assessment</li>
+        <li>Technical due diligence for M&amp;A and investment decisions</li>
+      </ul>
+    </div>
+
+    <div class="detail-card reveal">
+      <h3>&#x25CE; Prototype to Production</h3>
+      <span class="tag">Test Fixtures</span><span class="tag">Programming Jigs</span><span class="tag">Calibration</span><span class="tag">Documentation</span>
+      <p>The gap between "it works on the bench" and "it ships" is where most projects stall. We bridge that gap with production tooling, documentation, and manufacturing support.</p>
+      <ul>
+        <li>Test fixture and programming jig design</li>
+        <li>Calibration routines and production test sequences</li>
+        <li>Manufacturing documentation and work instructions</li>
+        <li>First-article inspection support</li>
+        <li>Continuous improvement and yield optimization</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band reveal">
+  <h2>Have a project in mind?</h2>
+  <p>Let's discuss your requirements and find the right engagement model for your team.</p>
+  <a href="contact.html" class="btn-primary">Start a Conversation <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div>
+<footer><p>&copy; 2026 Folger Systems Integration, LLC. All rights reserved.</p><div class="footer-links"><a href="services.html">Services</a><a href="expertise.html">Expertise</a><a href="industries.html">Industries</a><a href="contact.html">Contact</a></div></footer>
+<script>const reveals=document.querySelectorAll('.reveal');const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible');});},{threshold:0.12});reveals.forEach(el=>observer.observe(el));</script>
+</body></html>
