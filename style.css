@@ -128,12 +128,12 @@ footer p { font-size: 13px; color: var(--text-muted); }
 .product-bytesmtp:hover { border-color: rgba(108,142,255,0.3); }
 .product-govseeker::before { background: linear-gradient(90deg, var(--govseeker), #ff7799); }
 .product-govseeker:hover { border-color: rgba(224,85,119,0.3); }
-.product-icon { width: 48px; height: 48px; background: transparent; border: none; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 22px; overflow: visible; }
-.product-icon svg { width: 48px; height: 48px; border-radius: 10px; }
-.product-devpulse .product-icon { background: rgba(0,212,170,0.1); border-color: rgba(0,212,170,0.25); }
-.product-byteoven .product-icon { background: rgba(240,160,64,0.1); border-color: rgba(240,160,64,0.25); }
-.product-bytesmtp .product-icon { background: rgba(108,142,255,0.1); border-color: rgba(108,142,255,0.25); }
-.product-govseeker .product-icon { background: rgba(224,85,119,0.1); border-color: rgba(224,85,119,0.25); }
+.product-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+.picon { display: flex; align-items: center; justify-content: center; border-radius: 12px; flex-shrink: 0; font-family: 'JetBrains Mono', monospace; font-weight: 500; line-height: 1; user-select: none; }
+.picon-dp { background: rgba(0,212,170,0.1); border: 1px solid rgba(0,212,170,0.22); color: #00d4aa; font-size: 12px; letter-spacing: -0.5px; }
+.picon-bo { background: rgba(240,160,64,0.1); border: 1px solid rgba(240,160,64,0.22); color: #f0a040; font-size: 15px; letter-spacing: -1px; }
+.picon-bs { background: rgba(108,142,255,0.1); border: 1px solid rgba(108,142,255,0.22); color: #6C8EFF; font-size: 20px; }
+.picon-gs { background: rgba(201,162,39,0.1); border: 1px solid rgba(201,162,39,0.22); color: #c9a227; font-size: 18px; }
 .product-badge { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 10px; border-radius: 100px; margin-bottom: 16px; }
 .product-devpulse .product-badge { color: var(--devpulse); background: rgba(0,212,170,0.1); border: 1px solid rgba(0,212,170,0.2); }
 .product-byteoven .product-badge { color: var(--byteoven); background: rgba(240,160,64,0.1); border: 1px solid rgba(240,160,64,0.2); }
