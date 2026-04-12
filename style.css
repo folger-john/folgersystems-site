@@ -4,6 +4,7 @@
   --accent: #00d4aa; --accent-dim: #00d4aa22; --accent-glow: #00d4aa44; --accent-warm: #f0a040;
   --border: #222230; --border-light: #2a2a3a;
   --radius: 12px; --radius-sm: 8px; --radius-lg: 20px;
+  --devpulse: #00d4aa; --byteoven: #f0a040; --bytesmtp: #6C8EFF; --govseeker: #e05577;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: var(--border-light) var(--bg-primary); }
@@ -111,5 +112,64 @@ footer p { font-size: 13px; color: var(--text-muted); }
 .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-@media (max-width: 1024px) { .card-grid { grid-template-columns: repeat(2, 1fr); } .card-grid-2 { grid-template-columns: 1fr; } .two-col { grid-template-columns: 1fr; gap: 48px; } }
-@media (max-width: 768px) { nav { padding: 16px 20px; } .nav-links { display: none; } .mobile-menu-btn { display: block; } section, .hero, .page-hero { padding-left: 20px; padding-right: 20px; } .hero { padding-top: 120px; } .stats-bar { flex-direction: column; margin: 60px 20px 0; } .card-grid { grid-template-columns: 1fr; } .hero-actions { flex-direction: column; align-items: flex-start; } .contact-card { padding: 36px 24px; } footer { flex-direction: column; gap: 16px; text-align: center; } }
+
+/* PRODUCT GRID - Homepage */
+.product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.product-card { display: block; text-decoration: none; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 40px 36px; position: relative; overflow: hidden; transition: all 0.4s ease; cursor: pointer; }
+.product-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; transition: opacity 0.4s ease; opacity: 0.6; }
+.product-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+.product-card:hover::before { opacity: 1; }
+.product-devpulse::before { background: linear-gradient(90deg, var(--devpulse), #00ffcc); }
+.product-devpulse:hover { border-color: rgba(0,212,170,0.3); }
+.product-byteoven::before { background: linear-gradient(90deg, var(--byteoven), #ffcc44); }
+.product-byteoven:hover { border-color: rgba(240,160,64,0.3); }
+.product-bytesmtp::before { background: linear-gradient(90deg, var(--bytesmtp), #99b3ff); }
+.product-bytesmtp:hover { border-color: rgba(108,142,255,0.3); }
+.product-govseeker::before { background: linear-gradient(90deg, var(--govseeker), #ff7799); }
+.product-govseeker:hover { border-color: rgba(224,85,119,0.3); }
+.product-icon { width: 48px; height: 48px; background: transparent; border: none; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 22px; overflow: visible; }
+.product-icon svg { width: 48px; height: 48px; border-radius: 10px; }
+.product-devpulse .product-icon { background: rgba(0,212,170,0.1); border-color: rgba(0,212,170,0.25); }
+.product-byteoven .product-icon { background: rgba(240,160,64,0.1); border-color: rgba(240,160,64,0.25); }
+.product-bytesmtp .product-icon { background: rgba(108,142,255,0.1); border-color: rgba(108,142,255,0.25); }
+.product-govseeker .product-icon { background: rgba(224,85,119,0.1); border-color: rgba(224,85,119,0.25); }
+.product-badge { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 10px; border-radius: 100px; margin-bottom: 16px; }
+.product-devpulse .product-badge { color: var(--devpulse); background: rgba(0,212,170,0.1); border: 1px solid rgba(0,212,170,0.2); }
+.product-byteoven .product-badge { color: var(--byteoven); background: rgba(240,160,64,0.1); border: 1px solid rgba(240,160,64,0.2); }
+.product-bytesmtp .product-badge { color: var(--bytesmtp); background: rgba(108,142,255,0.1); border: 1px solid rgba(108,142,255,0.2); }
+.product-govseeker .product-badge { color: var(--govseeker); background: rgba(224,85,119,0.1); border: 1px solid rgba(224,85,119,0.2); }
+.product-card h3 { font-size: 22px; font-weight: 600; margin-bottom: 10px; color: var(--text-primary); }
+.product-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px; }
+.product-link { font-size: 13px; font-weight: 500; color: var(--accent); transition: color 0.2s; }
+.product-card:hover .product-link { color: #00e8ba; }
+
+/* PRODUCT DETAIL PAGES */
+.product-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; gap: 20px; flex-wrap: wrap; }
+.product-header h3 { font-size: 28px; margin-bottom: 0; }
+.product-highlight-devpulse { border-color: rgba(0,212,170,0.2); }
+.product-highlight-devpulse:hover { border-color: rgba(0,212,170,0.4); }
+.product-highlight-devpulse .section-label { color: var(--devpulse); }
+.product-highlight-devpulse ul li::before { background: var(--devpulse); }
+.product-highlight-byteoven { border-color: rgba(240,160,64,0.2); }
+.product-highlight-byteoven:hover { border-color: rgba(240,160,64,0.4); }
+.product-highlight-byteoven .section-label { color: var(--byteoven); }
+.product-highlight-byteoven .tag { color: var(--byteoven); background: rgba(240,160,64,0.1); border-color: rgba(240,160,64,0.25); }
+.product-highlight-byteoven ul li::before { background: var(--byteoven); }
+.product-highlight-bytesmtp { border-color: rgba(108,142,255,0.2); }
+.product-highlight-bytesmtp:hover { border-color: rgba(108,142,255,0.4); }
+.product-highlight-bytesmtp .section-label { color: var(--bytesmtp); }
+.product-highlight-bytesmtp .tag { color: var(--bytesmtp); background: rgba(108,142,255,0.1); border-color: rgba(108,142,255,0.25); }
+.product-highlight-bytesmtp ul li::before { background: var(--bytesmtp); }
+.product-highlight-govseeker { border-color: rgba(224,85,119,0.2); }
+.product-highlight-govseeker:hover { border-color: rgba(224,85,119,0.4); }
+.product-highlight-govseeker .section-label { color: var(--govseeker); }
+.product-highlight-govseeker .tag { color: var(--govseeker); background: rgba(224,85,119,0.1); border-color: rgba(224,85,119,0.25); }
+.product-highlight-govseeker ul li::before { background: var(--govseeker); }
+
+/* MOBILE NAV DROPDOWN */
+@media (max-width: 768px) {
+  .nav-links.show { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(10,10,12,0.95); backdrop-filter: blur(20px); padding: 20px; border-bottom: 1px solid var(--border); gap: 16px; }
+}
+
+@media (max-width: 1024px) { .card-grid { grid-template-columns: repeat(2, 1fr); } .card-grid-2 { grid-template-columns: 1fr; } .two-col { grid-template-columns: 1fr; gap: 48px; } .product-grid { grid-template-columns: 1fr; } }
+@media (max-width: 768px) { nav { padding: 16px 20px; } .nav-links { display: none; } .mobile-menu-btn { display: block; } section, .hero, .page-hero { padding-left: 20px; padding-right: 20px; } .hero { padding-top: 120px; } .stats-bar { flex-direction: column; margin: 60px 20px 0; } .card-grid { grid-template-columns: 1fr; } .hero-actions { flex-direction: column; align-items: flex-start; } .contact-card { padding: 36px 24px; } footer { flex-direction: column; gap: 16px; text-align: center; } .product-header { flex-direction: column; } }
