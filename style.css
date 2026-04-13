@@ -172,6 +172,12 @@ footer p { font-size: 13px; color: var(--text-muted); }
 .sc-govseeker .showcase-cta { color: #d4a827; }
 .showcase-card:hover .showcase-cta { gap: 10px; }
 
+/* ByteSMTP wordmark */
+.bytesmtp-wordmark { font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 34px; color: #fff; position: relative; z-index: 2; transition: transform 0.45s cubic-bezier(0.16,1,0.3,1); }
+.bw-light { font-weight: 400; opacity: 0.85; }
+.bw-bold { font-weight: 700; letter-spacing: -1.5px; }
+.showcase-card:hover .bytesmtp-wordmark { transform: scale(1.08) translateY(-4px); }
+
 /* Keep old classes for products/about pages */
 .product-icon img { width: 56px; height: 56px; border-radius: 12px; object-fit: contain; display: block; }
 .picon { display: flex; align-items: center; justify-content: center; border-radius: 16px; flex-shrink: 0; }
