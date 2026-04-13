@@ -1,16 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1a1f6e"/>
-      <stop offset="100%" stop-color="#0f1147"/>
+      <stop offset="0%" stop-color="#1a1f75"/>
+      <stop offset="100%" stop-color="#0d1158"/>
     </linearGradient>
+    <linearGradient id="ac" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <!-- Background -->
   <rect width="48" height="48" rx="10" fill="url(#bg)"/>
   <!-- Envelope body -->
-  <rect x="7" y="14" width="34" height="22" rx="4" fill="none" stroke="#6C8EFF" stroke-width="2"/>
-  <!-- Envelope flap -->
-  <path d="M7 18L24 28L41 18" stroke="#6C8EFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- @ mark centered -->
-  <text x="24" y="30" text-anchor="middle" font-family="'SF Mono','Fira Code',monospace" font-size="10" font-weight="700" fill="#8ba4ff" opacity="0.7">@</text>
+  <rect x="7" y="15" width="34" height="22" rx="4" fill="none" stroke="url(#ac)" stroke-width="2" filter="url(#glow)"/>
+  <!-- Envelope V fold -->
+  <path d="M7 19L24 30L41 19" stroke="url(#ac)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <!-- Bottom fold lines -->
+  <path d="M7 37L18 27" stroke="#6366f1" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+  <path d="M41 37L30 27" stroke="#6366f1" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+  <!-- Subtle @ mark -->
+  <text x="24" y="28" text-anchor="middle" font-family="monospace" font-size="7" font-weight="700" fill="#818cf8" opacity="0.5">@</text>
 </svg>
