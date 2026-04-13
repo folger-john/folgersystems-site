@@ -178,6 +178,26 @@ footer p { font-size: 13px; color: var(--text-muted); }
 .bw-bold { font-weight: 700; letter-spacing: -1.5px; }
 .showcase-card:hover .bytesmtp-wordmark { transform: scale(1.08) translateY(-4px); }
 
+/* SiteCrisp showcase card */
+.sc-sitecrisp .showcase-stage { background: radial-gradient(ellipse 90% 80% at 50% 65%, rgba(200,241,53,0.14) 0%, transparent 65%), linear-gradient(160deg, #050601 0%, #0b0f02 60%, #080a03 100%); }
+.sc-sitecrisp::before { background: linear-gradient(90deg, #C8F135, #e0ff60); }
+.sc-sitecrisp:hover { border-color: rgba(200,241,53,0.2); }
+.sc-sitecrisp:hover .showcase-logo { filter: drop-shadow(0 20px 48px rgba(200,241,53,0.3)) drop-shadow(0 4px 16px rgba(0,0,0,0.5)); }
+.sc-sitecrisp .showcase-pill { color: #C8F135; background: rgba(200,241,53,0.08); border: 1px solid rgba(200,241,53,0.2); }
+.sc-sitecrisp .showcase-cta { color: #C8F135; }
+.sc-sitecrisp .showcase-url { }
+
+/* DevPulse companion app grid */
+.app-suite-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin: 32px 0 16px; display: flex; align-items: center; gap: 10px; }
+.app-suite-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.app-suite-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.app-suite-card { display: flex; gap: 12px; align-items: flex-start; padding: 14px; background: var(--bg-secondary); border-radius: 10px; border: 1px solid var(--border); transition: border-color 0.2s, background 0.2s; }
+.app-suite-card:hover { border-color: var(--border-light); background: var(--bg-card); }
+.app-suite-icon { width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0; object-fit: contain; }
+.app-suite-name { font-size: 13px; font-weight: 600; margin-bottom: 3px; color: var(--text-primary); }
+.app-suite-desc { font-size: 12px; color: var(--text-muted); line-height: 1.55; }
+@media (max-width: 768px) { .app-suite-grid { grid-template-columns: 1fr; } }
+
 /* Keep old classes for products/about pages */
 .product-icon img { width: 56px; height: 56px; border-radius: 12px; object-fit: contain; display: block; }
 .picon { display: flex; align-items: center; justify-content: center; border-radius: 16px; flex-shrink: 0; }

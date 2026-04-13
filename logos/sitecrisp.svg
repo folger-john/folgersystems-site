@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <rect width="48" height="48" rx="10" fill="#080808"/>
+  <!-- Top-left crop bracket -->
+  <path d="M6 21 L6 6 L21 6" stroke="#C8F135" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"/>
+  <!-- Bottom-right crop bracket -->
+  <path d="M27 42 L42 42 L42 27" stroke="#C8F135" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"/>
+  <!-- Center accent dot -->
+  <rect x="21" y="21" width="6" height="6" fill="#C8F135" opacity="0.65"/>
+</svg>
