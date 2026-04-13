@@ -128,7 +128,8 @@ footer p { font-size: 13px; color: var(--text-muted); }
 .product-bytesmtp:hover { border-color: rgba(108,142,255,0.3); }
 .product-govseeker::before { background: linear-gradient(90deg, var(--govseeker), #ff7799); }
 .product-govseeker:hover { border-color: rgba(224,85,119,0.3); }
-.product-icon { width: 72px; height: 72px; border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
+.product-icon { width: 72px; height: 72px; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
+.product-icon img { width: 72px; height: 72px; border-radius: 16px; object-fit: contain; display: block; }
 .product-url { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); margin-bottom: 14px; display: flex; align-items: center; gap: 5px; letter-spacing: 0.02em; }
 .product-url svg { opacity: 0.5; }
 .product-card:hover .product-url { color: var(--text-secondary); }
