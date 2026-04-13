@@ -15,9 +15,8 @@ a { color: inherit; text-decoration: none; }
 /* NAV */
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; backdrop-filter: blur(20px); background: rgba(10,10,12,0.8); border-bottom: 1px solid var(--border); transition: all 0.3s ease; }
 .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--text-primary); }
-.nav-logo-mark { width: 52px; height: 52px; border-radius: 13px; background: linear-gradient(145deg, #0c1c30, #060b14); display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative; box-shadow: 0 2px 16px rgba(0,0,0,0.5); }
-.nav-logo-mark::before { content: ''; position: absolute; inset: 0; border-radius: 13px; padding: 1px; background: linear-gradient(135deg, rgba(0,255,204,0.6) 0%, rgba(0,170,255,0.3) 50%, rgba(136,51,255,0.4) 100%); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; }
-.nav-logo-letter { font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: 500; line-height: 1; background: linear-gradient(135deg, #00FFCC 0%, #22BBFF 50%, #9944FF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; filter: drop-shadow(0 0 8px rgba(0,180,255,0.5)); }
+.nav-logo-mark { width: 52px; height: 52px; border-radius: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative; box-shadow: 0 2px 18px rgba(0,0,0,0.55), 0 0 0 1px rgba(0,212,170,0.2); }
+.nav-logo-mark img { width: 52px; height: 52px; display: block; border-radius: 13px; }
 .nav-logo-text { font-weight: 600; font-size: 19px; letter-spacing: -0.02em; }
 .nav-logo-text span { color: var(--text-muted); font-weight: 400; }
 .nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
@@ -224,6 +223,15 @@ footer p { font-size: 13px; color: var(--text-muted); }
 .product-highlight-govseeker .section-label { color: var(--govseeker); }
 .product-highlight-govseeker .tag { color: var(--govseeker); background: rgba(224,85,119,0.1); border-color: rgba(224,85,119,0.25); }
 .product-highlight-govseeker ul li::before { background: var(--govseeker); }
+
+/* WHY SECTION */
+.why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 960px; margin: 0 auto; }
+.why-card { padding: 32px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); }
+.why-card:hover { border-color: var(--border-light); }
+.why-icon { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 400; color: var(--accent); letter-spacing: 0.08em; margin-bottom: 14px; }
+.why-card h3 { font-size: 17px; font-weight: 600; margin-bottom: 12px; color: var(--text-primary); }
+.why-card p { font-size: 15px; color: var(--text-secondary); line-height: 1.75; }
+@media (max-width: 768px) { .why-grid { grid-template-columns: 1fr; } }
 
 /* MOBILE NAV DROPDOWN */
 @media (max-width: 768px) {
