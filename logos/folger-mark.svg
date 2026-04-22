@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <!-- Outer glow filter -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Soft glow for dots -->
+    <filter id="dotglow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Subtle background glow -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0d2a3f"/>
+      <stop offset="100%" stop-color="#060f1a"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="200" height="200" rx="32" fill="url(#bgGlow)"/>
+  <rect width="200" height="200" rx="32" fill="#0d1b2a"/>
+
+  <!-- Subtle center radial glow -->
+  <circle cx="100" cy="100" r="70" fill="#003355" opacity="0.25"/>
+
+  <!--
+    Outer hexagon (pointy-top): R=78
+    V0(top):         100, 22
+    V1(top-right):   167.6, 61
+    V2(bottom-right):167.6, 139
+    V3(bottom):      100, 178
+    V4(bottom-left): 32.4, 139
+    V5(top-left):    32.4, 61
+
+    Inner hexagon (3D cube): r=30
+    v0(top):         100, 70
+    v1(top-right):   125.98, 85
+    v2(bottom-right):125.98, 115
+    v3(bottom):      100, 130
+    v4(bottom-left): 74.02, 115
+    v5(top-left):    74.02, 85
+  -->
+
+  <!-- Spider lines: inner hex vertex → outer hex vertex (glow layer) -->
+  <g filter="url(#glow)" opacity="0.5">
+    <line x1="100" y1="70"     x2="100"   y2="22"    stroke="#00d4ff" stroke-width="2"/>
+    <line x1="125.98" y1="85"  x2="167.6" y2="61"    stroke="#00d4ff" stroke-width="2"/>
+    <line x1="125.98" y1="115" x2="167.6" y2="139"   stroke="#00d4ff" stroke-width="2"/>
+    <line x1="100"   y1="130"  x2="100"   y2="178"   stroke="#00d4ff" stroke-width="2"/>
+    <line x1="74.02" y1="115"  x2="32.4"  y2="139"   stroke="#00d4ff" stroke-width="2"/>
+    <line x1="74.02" y1="85"   x2="32.4"  y2="61"    stroke="#00d4ff" stroke-width="2"/>
+  </g>
+
+  <!-- Spider lines: crisp layer -->
+  <g opacity="0.75">
+    <line x1="100" y1="70"     x2="100"   y2="22"    stroke="#00d4ff" stroke-width="1.2"/>
+    <line x1="125.98" y1="85"  x2="167.6" y2="61"    stroke="#00d4ff" stroke-width="1.2"/>
+    <line x1="125.98" y1="115" x2="167.6" y2="139"   stroke="#00d4ff" stroke-width="1.2"/>
+    <line x1="100"   y1="130"  x2="100"   y2="178"   stroke="#00d4ff" stroke-width="1.2"/>
+    <line x1="74.02" y1="115"  x2="32.4"  y2="139"   stroke="#00d4ff" stroke-width="1.2"/>
+    <line x1="74.02" y1="85"   x2="32.4"  y2="61"    stroke="#00d4ff" stroke-width="1.2"/>
+  </g>
+
+  <!-- Outer hexagon (glow layer) -->
+  <polygon
+    points="100,22 167.6,61 167.6,139 100,178 32.4,139 32.4,61"
+    fill="none" stroke="#00d4ff" stroke-width="4" stroke-linejoin="round"
+    filter="url(#glow)" opacity="0.6"/>
+
+  <!-- Outer hexagon (crisp layer) -->
+  <polygon
+    points="100,22 167.6,61 167.6,139 100,178 32.4,139 32.4,61"
+    fill="none" stroke="#00d4ff" stroke-width="2.2" stroke-linejoin="round"/>
+
+  <!-- Inner hexagon (glow layer) -->
+  <polygon
+    points="100,70 125.98,85 125.98,115 100,130 74.02,115 74.02,85"
+    fill="none" stroke="#00e5ff" stroke-width="3.5" stroke-linejoin="round"
+    filter="url(#glow)" opacity="0.7"/>
+
+  <!-- Inner hexagon (crisp layer) -->
+  <polygon
+    points="100,70 125.98,85 125.98,115 100,130 74.02,115 74.02,85"
+    fill="none" stroke="#00e5ff" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- 3D cube interior lines: center to alternating vertices (v0, v2, v4) -->
+  <g filter="url(#glow)" opacity="0.6">
+    <line x1="100" y1="100" x2="100"    y2="70"   stroke="#00e5ff" stroke-width="3"/>
+    <line x1="100" y1="100" x2="125.98" y2="115"  stroke="#00e5ff" stroke-width="3"/>
+    <line x1="100" y1="100" x2="74.02"  y2="115"  stroke="#00e5ff" stroke-width="3"/>
+  </g>
+  <g opacity="0.9">
+    <line x1="100" y1="100" x2="100"    y2="70"   stroke="#00e5ff" stroke-width="1.5"/>
+    <line x1="100" y1="100" x2="125.98" y2="115"  stroke="#00e5ff" stroke-width="1.5"/>
+    <line x1="100" y1="100" x2="74.02"  y2="115"  stroke="#00e5ff" stroke-width="1.5"/>
+  </g>
+
+  <!-- Outer vertex dots (glow) -->
+  <g filter="url(#dotglow)">
+    <circle cx="100"   cy="22"  r="5.5" fill="#00e5ff" opacity="0.8"/>
+    <circle cx="167.6" cy="61"  r="5.5" fill="#00e5ff" opacity="0.8"/>
+    <circle cx="167.6" cy="139" r="5.5" fill="#00e5ff" opacity="0.8"/>
+    <circle cx="100"   cy="178" r="5.5" fill="#00e5ff" opacity="0.8"/>
+    <circle cx="32.4"  cy="139" r="5.5" fill="#00e5ff" opacity="0.8"/>
+    <circle cx="32.4"  cy="61"  r="5.5" fill="#00e5ff" opacity="0.8"/>
+  </g>
+
+  <!-- Outer vertex dots (crisp) -->
+  <circle cx="100"   cy="22"  r="4"   fill="#00e5ff"/>
+  <circle cx="167.6" cy="61"  r="4"   fill="#00e5ff"/>
+  <circle cx="167.6" cy="139" r="4"   fill="#00e5ff"/>
+  <circle cx="100"   cy="178" r="4"   fill="#00e5ff"/>
+  <circle cx="32.4"  cy="139" r="4"   fill="#00e5ff"/>
+  <circle cx="32.4"  cy="61"  r="4"   fill="#00e5ff"/>
+
+  <!-- Inner hex vertex dots (small) -->
+  <g opacity="0.9">
+    <circle cx="100"    cy="70"  r="2.5" fill="#00e5ff"/>
+    <circle cx="125.98" cy="85"  r="2.5" fill="#00e5ff"/>
+    <circle cx="125.98" cy="115" r="2.5" fill="#00e5ff"/>
+    <circle cx="100"    cy="130" r="2.5" fill="#00e5ff"/>
+    <circle cx="74.02"  cy="115" r="2.5" fill="#00e5ff"/>
+    <circle cx="74.02"  cy="85"  r="2.5" fill="#00e5ff"/>
+  </g>
+
+  <!-- Center nucleus dot -->
+  <circle cx="100" cy="100" r="4" fill="#00e5ff" filter="url(#dotglow)" opacity="0.9"/>
+  <circle cx="100" cy="100" r="3" fill="#ffffff" opacity="0.9"/>
+</svg>
